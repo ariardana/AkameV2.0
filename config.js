@@ -19,38 +19,38 @@ global.APIs = {
 //—————「 Website Apikey 」—————//
 global.APIKeys = {
     //gausah di apa² in, Udah Free kok :)
-    'https://zenzapis.xyz': 'akame-chan>_<',
+    'https://zenzapis.xyz': 'fcd4dc4156ad',
 }
 
 //—————「 Set Nama Bot & Own 」—————//
 //terserah mau ubah atau nggak
-global.namabot = 'Akame'
-global.namaowner = 'GuaAbuzz'
+global.namabot = 'Azusa Bot'
+global.namaowner = 'Azusa'
 
 //—————「 Setting Owner 」—————//
 //terserah mau ubah atau nggak
-global.owner = ['6289636827082']
-global.ownernomer = "6289636827082"
-global.premium = ['6289636827082','6282171978174']
+global.owner = ['6281249114069']
+global.ownernomer = "6281249114069"
+global.premium = ['6281249114069']
 
 //—————「 Setting Donasi 」—————//
 //ubah aja kalau ada yg gapunya kasih tanda -
-global.saweria = ['https://saweria.co/GuaAbuzz']
+global.saweria = ['-']
 
 //—————「 Set Kebutuhan Button 」—————//
 //ubah aja kalau ada yang gapunya gsh di hps anggap aja credits :)
-global.email = 'rajifarmansyah46@gmail.com'
-global.namaweb = 'TikTok'
-global.myweb = 'https://tiktok.com/@guaabuzz'
-global.region = 'Jepang'
-global.github = 'https://github.com/Abuzzpoet'
+global.email = 'ariardana192@gmail.com'
+global.namaweb = 'FB'
+global.myweb = 'https://fb.me/arie.ganz96'
+global.region = 'Indonesia'
+global.github = 'https://github.com/'
 global.mygc = 'https://chat.whatsapp.com/FGmVjFYJBjjGst62qwNKJB'
-global.mytt = 'https://tiktok.com/@guaabuzz'
+global.mytt = '-'
 
 //—————「 Set Wm 」—————//
 //terserah mau ubah atau nggak
-global.packname = 'GuaAbuzz'
-global.author = 'WhatsApp Bot'
+global.packname = 'Azusa'
+global.author = 'WhatsApp Bot 081331941355'
 
 //—————「 Set Nama Session 」—————//
 //gausah di apa² ini!
@@ -86,16 +86,16 @@ global.mess = {
 //terserah mau ubah atau nggak
 global.limitawal = {
     premium: "Infinity",
-    free: 50,
+    free: 500,
 }
 
 //—————「 Set Image 」—————//
 //terserah mau ubah apa nggak, menurut gua jangan di ubah!
 global.thumb = fs.readFileSync('./media/image/akame.jpg')
 global.kurome = { url: 'https://telegra.ph/file/de381b0caeb315a99c68a.mp4' }
-global.botname = 'GuaAbuzz Creator'
-global.akulaku = 'Bot By GuaAbuzz'
-global.ttname = 'TikTok GuaAbuzz'
+global.botname = 'Azusa Bot'
+global.akulaku = 'Bot By Azusa'
+global.ttname = ''
 
 //—————「 Set Random Image Menu 」—————//
 //gausah di apa² in!
