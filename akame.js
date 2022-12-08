@@ -123,16 +123,6 @@ module.exports = akame = async (akame, m, chatUpdate, store) => {
         if(time2 < "03:00:00"){
         var ucapanWaktu = 'Selamat Tengah Malam 🌃'
 }
-
-        //Time Menuju Ulang Tahun Untuk GuaAbuzz :)
-        const HBD = new Date('July 17, 2023 06:00:00').getTime();
-        const sekarang = new Date().getTime();
-        const Selisih = HBD - sekarang;
-        const jhari = Math.floor(Selisih / (1000 * 60 * 60 * 24));
-        const jjam = Math.floor(Selisih % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
-        const mmmenit = Math.floor(Selisih % (1000 * 60 * 60) / (1000 * 60));
-        const ddetik = Math.floor(Selisih % (1000 * 60) / 1000);
-        const menuju = `${jhari}Hari ${jjam}Jam ${mmmenit}Menit ${ddetik}Detik`
         
         //buttons Tambahan
         const ntiktok = ('© GuaAbuzz\nTikTok/Github :\nhttps://github.com/Abuzzpoet')  //ubah di config biar ngk emror
@@ -505,7 +495,7 @@ const fakestatus = {
 	    if (new Date() * 1 - setting.status > 1000) {
 		let _uptime = process.uptime() * 1000
 		let uptime = clockString(_uptime)
-		await akame.updateProfileStatus(`I am Akame-Bot | Aktif Selama ${uptime} ⏳ | Mode : ${akame.public ? 'Public-Mode 👥' : 'Self-Mode 👤'} | User : ${Object.keys(global.db.data.users).length} 👥| Jangan Telp Bot 📞 | © Created GuaAbuzz`).catch(_ => _)
+		await akame.updateProfileStatus(`I am Azusa-Bot | Aktif Selama ${uptime} ⏳ | User : ${Object.keys(global.db.data.users).length} 👥| Jangan Telp Bot 📞`).catch(_ => _)
 		setting.status = new Date() * 1
 	    }
 	}
@@ -1269,8 +1259,6 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
 │└─────────────┈❖
 │• Tanggal Server : ${moment.tz('Asia/Jakarta').format('DD/MM/YY')}
 │• Waktu Server : ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}
-│• Menuju HBD GuaAbuzz :
-│  ${menuju}
 │• WIB : ${wib}
 │• WITA : ${wita}
 │• WIT : ${wit}
@@ -1292,26 +1280,11 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
 │• User : ${isPremium ? 'Premium 👑' : 'Gratisan 🗿'}
 │• Limit : ${isCreator ? 'Unlimited 👑' : `${db.data.users[m.sender].limit}`}
 └┬─────────────┈❖
-┌┤「 INFO BOT 」
-│└─────────────┈❖
-│• Name : ${global.namabot}
-│• Owner : ${global.namaowner}
-│• Prefix : ( ${prefix} )
-│• Mode : ${akame.public ? 'Public-Mode 👥' : 'Self-Mode 👤'}
-│• Total Hit : ${jumlahcmd}
-│• Total Hit Today : ${jumlahharian}
-│• Platform : ${os.platform()}
-│• Runtime :
-│  ${runtime(process.uptime())}
-│• Language : Javascript
-│• Lib : Baileys-md
 └┬─────────────┈❖
 ┌┤「 INFO TIME 」
 │└─────────────┈❖
 │• Tanggal Server : ${moment.tz('Asia/Jakarta').format('DD/MM/YY')}
 │• Waktu Server : ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}
-│• Menuju HBD GuaAbuzz :
-│  ${menuju}
 │• WIB : ${wib}
 │• WITA : ${wita}
 │• WIT : ${wit}
@@ -1477,7 +1450,8 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                 break
             case 'rate': {
                 if (!q) return m.reply(`Penggunaan ${command} text\n\nContoh : ${command} Gambar aku`)
-                const ra = ['5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60', '65', '70', '75', '80', '85', '90', '95', '100']
+              
+		   const ra = ['5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60', '65', '70', '75', '80', '85', '90', '95', '100']
                 const te = ra[Math.floor(Math.random() * ra.length)]
                 akame.sendMessage(m.chat, {
                     text: `Rate : ${q}\nJawaban : *${te}%*`
@@ -1488,7 +1462,8 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                 break
             case 'gantengcek':
             case 'cekganteng': {
-                if (!q) return m.reply(`Penggunaan ${command} Nama\n\nContoh : ${command} GuaAbuzz`)
+                if (!q) return m.reply(`Penggunaan ${command} Nama\n\nContoh : ${command} 
+		buzz`)
                 const gan = ['10% banyak" perawatan ya bang:v\nCanda Perawatan:v','30% Semangat bang Merawat Dirinya><','20% Semangat Ya bang👍','40% Wahh bang><','50% abang Ganteng deh><','60% Hai Ganteng🐊','70% Hai Ganteng🐊','62% Bang Ganteng><','74% abang ni ganteng deh><','83% Love You abang><','97% Assalamualaikum Ganteng🐊','100% Bang Pake Susuk ya??:v','29% Semangat Bang:)','94% Hai Ganteng><','75% Hai Bang Ganteng','82% wihh abang Pasti Sering Perawatan kan??','41% Semangat:)','39% Lebih Semangat🐊']
                 const teng = gan[Math.floor(Math.random() * gan.length)]
                 akame.sendMessage(m.chat, {
@@ -6925,27 +6900,11 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
 │  Untuk Lapor Owner Agar Segera
 │  Diperbaiki Atau DiFix.
 └┬─────────────┈❖
-┌┤「 INFO BOT 」
-│└─────────────┈❖
-│• Name : ${global.namabot}
-│• Owner : ${global.namaowner}
-│• Prefix : ( ${prefix} )
-│• Mode : ${akame.public ? 'Public-Mode 👥' : 'Self-Mode 👤'}
-│• Total Hit : ${jumlahcmd}
-│• Total Hit Today : ${jumlahharian}
-│• Platform : ${os.platform()}
-│• Ram : ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
-│• Runtime :
-│  ${runtime(process.uptime())}
-│• Language : Javascript
-│• Lib : Baileys-md
 └┬─────────────┈❖
 ┌┤「 INFO TIME 」
 │└─────────────┈❖
 │• Tanggal Server : ${moment.tz('Asia/Jakarta').format('DD/MM/YY')}
 │• Waktu Server : ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}
-│• Menuju HBD GuaAbuzz :
-│  ${menuju}
 │• WIB : ${wib}
 │• WITA : ${wita}
 │• WIT : ${wit}
@@ -7512,7 +7471,7 @@ Lihat list Pesan Dengan ${prefix}listmsg`)
         	        { buttonId: 'rules', buttonText: { displayText: '❗Rules' }, type: 1 },
                     { buttonId: 'owner', buttonText: { displayText: '➡️Chat Owner' }, type: 1 }
                 ]
-			akame.sendMessage(m.chat, { text:`INVITE DETECT\n\nMau masukin bot ini ke group kamu?`, title: 'LINK GROUP DECTETED', footer: '© 2022 GuaAbuzz', buttons: buttons, headerType: 5 })
+			akame.sendMessage(m.chat, { text:`INVITE DETECT\n\nMau masukin bot ini ke group kamu?`, title: 'LINK GROUP DECTETED', footer: '© 2022 Azusa', buttons: buttons, headerType: 5 })
 		}
                 if (budy.startsWith('=>')) {
                     if (!isCreator) return m.reply(mess.owner)
